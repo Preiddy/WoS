@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Separar autores</title>
+	  <body>
+En la BD hay que ejecutar: SELECT UT || '; ' || AU FROM isi_t_todo<br>
+SELECT UT, UPPER(AU) AS AU FROM isi_t_todo <br>
+	  </body>
+<script>
+var autores=new Array("WOS:000293398200006; Niaz, M",
+"WOS:000293274700008; Deluca, MEG",
+"WOS:000290271800013; Vessuri, H",
+"WOS:000288264500006; Konieczny, S; Perez, RP",
+"WOS:000287777400027; Barrios, C",
+"WOS:000287777400026; Barrios, C",
+"WOS:000288204400004; Colmenares, G; Escalante, R; Sans, JF; Suros, R",
+"WOS:000289437300015; Ellner, S",
+"WOS:000294582700002; Tirado, RL; Young, ME",
+"WOS:000292954600013; Rosenblitt, J",
+"WOS:000286703100008; Finol, JE",
+"WOS:000286703100007; Gutierrez-Rivas, C",
+"WOS:000286690900007; Suarez, ML",
+"WOS:000284037300015; Kairuz, E",
+"WOS:000282386500009; Vazquez, C; Palacios, OM; Darchuk, L; Parra, LMM");
+for (i=0;i<autores.length;i++){
+    cadena = autores[i].split("; ");
+for (var x=1;x<cadena.length;x++){
+    document.write('"' + cadena[0] + '"' +  ';' + '"' + cadena[x] + '"' + '<br>')
+    }} 
+</script>
+</html>
