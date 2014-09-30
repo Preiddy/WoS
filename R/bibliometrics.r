@@ -21,3 +21,7 @@ lang=dbGetQuery(mycon,"SELECT LA,  COUNT(LA) AS Frec FROM isi_t_todo GROUP BY LA
 prod.au=dbGetQuery(mycon,"SELECT AU,  COUNT(AU) AS Frec FROM isi_t_autor GROUP BY TRIM(AU) ORDER BY Frec DESC")
 #Category
 prod.cat=dbGetQuery(mycon,"SELECT WC,  COUNT(WC) AS Frec FROM isi_t_cat GROUP BY TRIM(WC) ORDER BY Frec DESC")
+
+#Close
+sqliteCloseConnection(mycon)
+sqliteCloseDriver(driver)
