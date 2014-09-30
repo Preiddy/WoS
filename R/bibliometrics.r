@@ -4,7 +4,7 @@ library (RSQLite)
 driver <- dbDriver("SQLite")
 mycon <- dbConnect(driver, dbname = "metodologia.db")
 
-#Indicators
+#Basic Indicators
 #Year
 prod.year <- dbGetQuery(mycon,"SELECT PY,  COUNT(PY) AS Frec FROM isi_t_todo GROUP BY PY")
 plot(prod.year, type="o",ylim=c(600,800))
@@ -12,7 +12,7 @@ write.csv2(prod.year,"Prod_Year.csv")
 #Source
 prod.source<- dbGetQuery(mycon,"SELECT SO,  COUNT(SO) AS FREC FROM isi_t_todo GROUP BY SO ORDER BY FREC DESC")
 plot(prod.source$FREC, type="l", log="y")
-write.csv2(prod.source,"Prod_Anio_Rev.csv")
+write.csv2(prod.source,"Prod_Year_Rev.csv")
 #Document Type
 doctype=dbGetQuery(mycon,"SELECT DT,  COUNT(DT) AS Frec FROM isi_t_todo GROUP BY DT")
 #Language
