@@ -2,6 +2,7 @@ Author: Preiddy Garcia
 ===
 
 Metodology for job with WoS files, SQLite and R.
+
 Working model for download from the main collection of the WoS in tabular format files. Imported into the database using the SQLite plugin for firefox SQLITE MANAGER. Fields relating to the authors, categories and addresses are separated by semicolons in the same field. So it is necessary to separate them and put them in tables, for this a javascript within a html file is used. Data are analyzed with R.
 
 Modelo de trabajo para archivos descargados de la coleccion principal de la WoS en formato tabulado.
